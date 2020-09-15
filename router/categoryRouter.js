@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 
-const{
+const {
     getAllCategory,
     getCategory,
     postCategory,
@@ -13,12 +13,12 @@ const{
 
 router.get("/", getAllCategory);
 
-router.get("/:categoryId",getCategory);
+router.post("/", postCategory);
 
-router.post("/",postCategory);
+router.post("/:categoryId/update", updateCategory);
 
-router.post("/:categoryId/update",updateCategory);
+router.get("/:categoryId", getCategory);
 
-router.post("/:categoryId",deleteCategory);
+router.post("/:categoryId", deleteCategory);
 
-module.exports=router;
+module.exports = router;
